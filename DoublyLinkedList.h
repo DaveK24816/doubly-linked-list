@@ -11,6 +11,7 @@ public:
 	~DoublyLinkedList();
 
 	void clear();
+	bool isEmpty() const { return head == nullptr; }
 
 	void addHead(int value);
 	void addTail(int value);
