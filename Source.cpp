@@ -1,7 +1,8 @@
 #include "DoublyLinkedList.h"
+#include "Queue.h"
 
 
-int main()
+void testDoublyLinkedList()
 {
 	DoublyLinkedList list;
 	list.addHead(3);
@@ -10,7 +11,27 @@ int main()
 	cout << list << endl;
 	list.removeHead();
 	cout << list.toString(" -> ") << endl;
-	return 0;
 }
 
+void testQueue()
+{
+	Queue q;
+	q.enqueue(1);
+	q.enqueue(2);
+	q.enqueue(3);
+	cout << "q = " << q.toString() << endl;
+	int i = q.dequeue();
+	cout << "i = " << i << "   q = " << q.toString() << endl;
+}
 
+int main()
+{
+	cout << "testDoublyLinkedList" << endl;
+	testDoublyLinkedList();
+
+	cout << "testQueue" << endl;
+	testQueue();
+
+
+	return 0;
+}
